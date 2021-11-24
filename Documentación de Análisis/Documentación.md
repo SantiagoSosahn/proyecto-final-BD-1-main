@@ -8,8 +8,6 @@ Se espera obtener:
 2. Pantalla del Login
 3. Y Conexion  
 
-25 de Noviembre
-----
-Se espera 
+
 
 
