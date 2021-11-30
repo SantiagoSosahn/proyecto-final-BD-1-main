@@ -9,5 +9,8 @@ Se espera obtener:
 3. Y Conexion (averiguar sobre el archivo config.ini)
 
 
+Para manejar las rutas de los directorios se decidio por el metodo os.path.direname(__file__) para no tener problemas, porque este metodo devuelve la ruta
+del archivo que se esta ejecutando.
+
 
 

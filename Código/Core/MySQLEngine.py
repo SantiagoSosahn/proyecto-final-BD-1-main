@@ -1,5 +1,5 @@
 import mysql.connector 
-from tabulate import tabulate
+#from tabulate import tabulate
 
 class MySQLEngine:
     def __init__(self,configConnection):
@@ -19,9 +19,9 @@ class MySQLEngine:
         return self.link.fetchall()
 
 
-    def printAsTable(self,result,headers=[]):
+   # def printAsTable(self,result,headers=[]):
 
-        if not headers:
-            print (tabulate(result))
-            else
-            print (tabulate(result,headers=headers))
+     #   if not headers:
+        #    print (tabulate(result))
+      #  else:
+       #     print (tabulate(result,headers=headers))
