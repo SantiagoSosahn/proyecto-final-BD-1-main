@@ -8,7 +8,7 @@ class Login:
 
         self.Box_login = Box(app, width="fill", height="fill", align="top", visible=False)
         self.Box_login.bg = "#03101C"
-        text_1 = Text(self.Box_login, text="Introdusca sus datos", size = 40)
+        text_1 = Text(self.Box_login, text="Introduzca sus datos", size = 40)
         text_1.text_color = "yellow"
         text_1.height = 2
         usuario = Text(self.Box_login, text="Usuario")
@@ -20,13 +20,13 @@ class Login:
         input_usuario = TextBox(self.Box_login)
         input_usuario.width = 35
         input_usuario.bg = "white"
-        contracenia = Text(self.Box_login, text="Contraceña")
-        contracenia.text_color = "yellow"
-        contracenia.text_size = 20
+        contraseña = Text(self.Box_login, text="Contraceña")
+        contraseña.text_color = "yellow"
+        contraseña.text_size = 20
 
         #Entrada de texto para la contraceña
 
-        input_contracenia = TextBox(self.Box_login)
+        input_contracenia = TextBox(self.Box_login, hide_text=True)
         input_contracenia.width = 35
         input_contracenia.bg = "white"
 
@@ -36,8 +36,9 @@ class Login:
      
      #Se debe crear la validacion del input con    
     def validate_input(self):
-        self.Login_Box.hide()
-        menu_principalBox = Core.menu_principal.Menu_principal(self.app)
+       pass
+       # self.Login_Box.hide()
+        #menu_principalBox = Core.menu_principal.Menu_principal(self.app)
         
         
         

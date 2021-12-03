@@ -1,4 +1,5 @@
 from guizero import App, Text, PushButton, Slider, ButtonGroup, PushButton, Box, TextBox
+from Core.login import Login
 
 
 class Welcome_screen_Game:
@@ -25,9 +26,9 @@ class Welcome_screen_Game:
     def regitroLogin(self):
     
         if(self.Box_inicio.visible == True):
-        
             self.Box_inicio.hide()
             login_screen = Login(self.app)
+            login_screen.show_login()
             
     def ShowGame(self):
         self.app.display()
