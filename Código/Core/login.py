@@ -1,28 +1,38 @@
 from guizero import TextBox, Text, PushButton, App, Box, MenuBar
-import Core.menu_principal
+
 
 
 class Login:
-    def __init__(self):
-        self.app = App(title="proyecto1", width=700, height=500,
-        layout='auto', bg="black")
-        
-        
-        #Login Box
-        self.Login_Box = Box(self.app,  width="fill", height="fill", align="center")
-        self.Login_Box.bg = "#03101C"
-        self.Login_Title = Text(self.Login_Box, text="Login",color="white")
-        self.Login_Title.size=32
-        self.Login_Title.font="Poppins"
-        self.txtb_name = TextBox(self.Login_Box,  width=25, height=5)
-        self.txtb_password = TextBox(self.Login_Box,  width=25, height=5,hide_text=True)
-        self.txtb_name.bg="white"
-        self.txtb_password.bg = "white"
-        self.iniciar_sesion = PushButton(self.Login_Box, text="Iniciar sesion", command=self.validate_input)
-        self.iniciar_sesion.bg="#FDB716"
+    def __init__(self, app):
+        #Pantalla de login
+
+        self.Box_login = Box(app, width="fill", height="fill", align="top", visible=False)
+        self.Box_login.bg = "#03101C"
+        text_1 = Text(self.Box_login, text="Introdusca sus datos", size = 40)
+        text_1.text_color = "yellow"
+        text_1.height = 2
+        usuario = Text(self.Box_login, text="Usuario")
+        usuario.text_color = "yellow"
+        usuario.text_size = 20
+
+        #Entrada de texto para el nombre de usuario
+
+        input_usuario = TextBox(self.Box_login)
+        input_usuario.width = 35
+        input_usuario.bg = "white"
+        contracenia = Text(self.Box_login, text="Contraceña")
+        contracenia.text_color = "yellow"
+        contracenia.text_size = 20
+
+        #Entrada de texto para la contraceña
+
+        input_contracenia = TextBox(self.Box_login)
+        input_contracenia.width = 35
+        input_contracenia.bg = "white"
+
         
     def show_login(self):
-        self.app.display()
+        self.Box_login.show()
      
      #Se debe crear la validacion del input con    
     def validate_input(self):
